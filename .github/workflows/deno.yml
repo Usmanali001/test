@@ -5,12 +5,11 @@ on: [push]
 jobs:
   build:
     runs-on: ubuntu-latest
-    name: React basic app Deploying to surge
+    name: Html Deploying to surge
     steps:
     - uses: actions/checkout@v2
   
-    - name: Install surge
-      run: npm install --global surge
+
      
     - name: Deploy to surge
       run: surge ./index.html https://numerous-quicksand.surge.sh/ --token ${{secrets.SURGE_TOKEN}}
